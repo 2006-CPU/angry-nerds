@@ -35,7 +35,6 @@ const Prod = (props) => {
               setQuantity(1)
               const productOrder = await addProductToOrder(orderId, id, price, quantity)
          } else if(!loggedIn){
-           console.log('we good')
            const grabbedCart = getCurrentCart();
            const grabbedProduct = await getProductById(id)
            grabbedCart.push(grabbedProduct)

@@ -73,6 +73,9 @@ const Cart = (props) => {
                 }
                 setTotal(newTotal)
             }
+            if(!orders){
+                setOrders([])
+            }
         }catch(error){
         console.error(error)
         }

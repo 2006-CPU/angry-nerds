@@ -33,7 +33,6 @@ const Navigation = (props) => {
     clearCurrentToken();
     clearCurrentCart();
     setOrders([])
-    console.log("See Ya!", "You Have Succesfully Logged Out!", "success");
     setUser({});
     setToken('');
     history.push('/users/login');
@@ -46,8 +45,6 @@ const Navigation = (props) => {
         setToken(theToken);
     }
   }, []);
-
-{console.log("this is the user:", user)}
 
     return <div><Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <NavLink to="/home">

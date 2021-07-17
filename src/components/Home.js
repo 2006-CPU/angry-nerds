@@ -15,7 +15,6 @@ const HomePage = (props) => {
         async function fetchProducts(){
           try{
         const data = await getAllProducts()
-        console.log('data array ', data)
         setProductRender(data)
         setFetchId(selectedId)
           }catch(error){
@@ -24,7 +23,6 @@ const HomePage = (props) => {
         }
     fetchProducts()
       },[selectedId]);
-      console.log('set render ',productRender)
 
     return <div>
       <div>

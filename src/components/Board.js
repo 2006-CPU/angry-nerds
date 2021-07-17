@@ -21,8 +21,6 @@ const MainBoard = (props) => {
     async function fetchProducts(){
       try{
     const data = await getAllProducts()
-    console.log('data array ', data)
-    console.log('category ', categorysel)
     setProductRender(data)
     setFetchId(selectedId)
       }catch(error){
@@ -34,7 +32,6 @@ const MainBoard = (props) => {
     useEffect(() => {
     fetchProducts()
       },[]);
-      console.log('set render ',productRender)
 
     return <><div style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
       {user && user.isadmin ? <Button onClick={() => {setAdminToggle(!adminToggle)}} style={{margin:'.4rem'}} variant="primary" size="lg" block>
